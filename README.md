@@ -15,6 +15,26 @@ A premium, production-grade **Interactive Wall Calendar** designed with modern a
 
 ---
 
+## 🏗️ Technical Architecture & Flow
+
+The application follows a **Decoupled Layered Architecture**:
+
+1.  **Logic (Hooks)**: Custom hooks (`useNotes`, `useReminders`) manage the internal state and business logic.
+2.  **Storage (Atomic)**: Implements a **Read-Modify-Write** pattern with `localStorage`. Every interaction freshly reads from disk to ensure data integrity.
+3.  **UI (Components)**: Atomic components (`DayCell`, `NotesPanel`) render the state and trigger handlers.
+4.  **Sync**: UI re-hydrates instantly upon storage updates, ensuring zero-latency feel with persistent safety.
+
+---
+
+## 🧠 Strategic Technical Choices
+
+- **Next.js 15 (App Router)**: Chosen for its superior routing, instant page loads, and built-in optimization for high-fidelity images.
+- **Month-Wise Partitioning**: Notes are bucketed by `YYYY-MM`. This prevents data bloat and ensures one month's data never interferes with another.
+- **Vanilla CSS Animations**: Complex 3D transformations (page flips) are handled via raw CSS keyframes for smoother 60fps performance and better browser GPU utilization.
+- **Deep Consistency**: Functional state updates + fresh storage reads guarantee no data overlaps even during rapid high-frequency user edits.
+
+---
+
 ## 🛠️ Technology Stack
 
 - **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
