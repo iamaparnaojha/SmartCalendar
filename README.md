@@ -9,6 +9,7 @@ A premium, production-grade **Interactive Wall Calendar** designed with modern a
 - **🎨 Premium Visuals**: Stunning glassmorphic UI with dynamic, season-based background imagery.
 - **📖 3D Page Flip**: Immersive 3D animations that simulate a real wall calendar page-turn.
 - **🔔 Smart Reminders**: Set quick reminders with interactive icons and full-page "success" celebrations.
+- **💕 Favourite dates**: Mark a date as your favourite with interactive icon and full page heart animations. 
 - **🔗 Shared Range Notes**: Context-aware note management for specific dates or multiple date ranges.
 - **💾 Industrial Persistence**: Robust **localStorage** synchronization with atomic month-wise isolation.
 - **🌓 Adaptive Themes**: Fluid transitions between Sleek Dark and Crystal Light modes.
